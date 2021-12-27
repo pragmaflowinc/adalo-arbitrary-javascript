@@ -1,0 +1,53 @@
+{
+  "displayName": "Arbitrary Javascript",
+  "defaultWidth": 160,
+  "defaultHeight": 24,
+  "components": "./index.js",
+  "icon": "./example-thumbnail.png",
+  "props": [
+    {
+      "name": "script",
+      "displayName": "Script to Run",
+      "type": "text",
+      "default": "var a = 1; var b = 2; return a + b;"
+    },
+    {
+      "name": "trigger",
+      "displayName": "Set this to true to execute the function",
+      "type": "text"
+    },
+    {
+      "name": "onStringResults",
+      "displayName": "String results of the executed code",
+      "type": "action",
+      "arguments": [
+        {
+          "displayName": "result",
+          "type": "text"
+        }
+      ]
+    },
+    {
+      "name": "onNumberResults",
+      "displayName": "Numeric results of the executed code",
+      "type": "action",
+      "arguments": [
+        {
+          "displayName": "result",
+          "type": "number"
+        }
+      ]
+    },
+    {
+      "name": "onError",
+      "displayName": "If the code fails, this will be triggered",
+      "type": "action",
+      "arguments": [
+        {
+          "displayName": "error message",
+          "type": "text"
+        }
+      ]
+    }
+  ]
+}

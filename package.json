@@ -1,0 +1,30 @@
+{
+  "name": "adalo-arbitrary-javascript",
+  "description": "Some times you just want to write code",
+  "version": "1.0.3",
+  "main": "index.js",
+  "license": "ISC",
+  "author": "Steven McKeown",
+  "scripts": {
+    "start": "adalo dev",
+    "login": "adalo login",
+    "publish": "adalo publish"
+  },
+  "adalo": {
+    "logo": "./example-logo.png",
+    "displayName": "Adalo Arbitrary Javascript",
+    "components": [
+      {
+        "name": "ArbitraryJavascript",
+        "manifest": "./src/components/ArbitraryJavascript/manifest.json"
+      }
+    ]
+  },
+  "devDependencies": {
+    "@adalo/cli": "^0.0.44",
+    "react": "^16.9.0",
+    "react-art": "^16.6.0",
+    "react-dom": "^16.9.0",
+    "react-native-web": "^0.9.5"
+  }
+}

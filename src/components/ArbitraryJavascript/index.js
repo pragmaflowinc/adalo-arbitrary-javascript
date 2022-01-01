@@ -3,8 +3,16 @@ import { Text, View, StyleSheet } from 'react-native'
 
 const ArbitraryJavascript = (props) => {
 	const [executionResults, setExecutionResults] = useState('')
-	const { trigger, script, onNumberResults, onStringResults, onError, editor } = props
-
+	const { 
+		trigger, 
+		script, 
+		onNumberResults, 
+		onStringResults, 
+		onError, 
+		editor,
+		styles
+	} = props
+	console.log(props)
 	const execute = () => {
 		try {
 			const results = new Function(script)
@@ -33,18 +41,16 @@ const ArbitraryJavascript = (props) => {
 	}, [trigger, editor])
 	
 	return(
-		<View style={styles.wrapper}>
-			<Text>{executionResults}</Text>
+		<View>
+			<Text style={{
+				color: styles.script?.color,
+				fontFamily: styles.script?.fontFamily,
+				fontSize: styles.script?.fontSize,
+				fontWeight: styles.script?.fontWeight,
+				textAlign: styles.script?.textAlign
+			}}>{executionResults}</Text>
 		</View>
 	)
 }
-
-const styles = StyleSheet.create({
-	wrapper: {
-		display: 'flex',
-		alignItems: 'center',
-		justifyContent: 'center',
-	}
-})
 
 export default ArbitraryJavascript

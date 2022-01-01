@@ -9,7 +9,14 @@
       "name": "script",
       "displayName": "Script to Run",
       "type": "text",
-      "default": "var a = 1; var b = 2; return a + b;"
+      "default": "var a = 1; var b = 2; return a + b;",
+      "styles": {
+        "fontFamily": "@body",
+        "color": "@text",
+        "fontWeight": 100,
+        "fontSize": 12,
+        "textAlignment": "left"
+      }
     },
     {
       "name": "trigger",

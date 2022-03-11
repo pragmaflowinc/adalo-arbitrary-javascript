@@ -1,7 +1,7 @@
 {
   "name": "adalo-arbitrary-javascript",
   "description": "Some times you just want to write code",
-  "version": "1.0.4",
+  "version": "1.0.6",
   "main": "index.js",
   "license": "ISC",
   "author": "Steven McKeown",
